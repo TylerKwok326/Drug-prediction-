@@ -55,6 +55,20 @@ Our initial analysis, presented in the PowerPoint, revealed:
    - Several approved drugs showed potential for repurposing
    - Integration with known cancer pathways suggests synergistic therapeutic approaches
 
+### Machine Learning Model Results
+1. **Model Performance**
+   - Random Forest Regressor achieved R-squared score: 0.5926 on test set
+   - Model trained on molecular fingerprint features (2048 dimensions)
+   - 80/20 train-test split with random state control
+   - Variance threshold feature selection (threshold = 0.8 * (1 - 0.8))
+   - Clear positive correlation between experimental and predicted pIC50 values
+
+2. **Dataset Characteristics**
+   - Input features: Binary molecular fingerprints (fp_0 to fp_2047)
+   - Target variable: pIC50 (float64)
+   - Dataset size: 2059 compounds
+   - Feature types: int64 for fingerprints, float64 for pIC50
+
 ### Drug Analysis Results
 1. **Primary Drug Candidates**
    - Valproic acid emerged as a leading candidate
@@ -70,3 +84,4 @@ Our initial analysis, presented in the PowerPoint, revealed:
 2. Investigation of drug combination strategies
 3. Development of FABP4-targeted therapeutic approaches
 4. Extension of analysis to other lung cancer subtypes
+
